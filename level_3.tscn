@@ -1,0 +1,192 @@
+[gd_scene load_steps=17 format=3 uid="uid://2x8epg4yrlrk"]
+
+[ext_resource type="Script" uid="uid://6w8vakh55bg3" path="res://gd/level_3.gd" id="1_fmu3g"]
+[ext_resource type="Texture2D" uid="uid://bn5nqktw04rra" path="res://imagem/Gemini_Generated_Image_pzxb52pzxb52pzxb.png" id="1_liaj6"]
+[ext_resource type="PackedScene" uid="uid://cw4o8abx0pgg7" path="res://enemie3.tscn" id="6_6p2dc"]
+[ext_resource type="FontFile" uid="uid://cunv1wgf8pum4" path="res://fonte/LilitaOne-Regular.ttf" id="7_g0tlw"]
+[ext_resource type="Texture2D" uid="uid://ccm1aestbhsu7" path="res://imagem/play_7476990.png" id="9_833wy"]
+[ext_resource type="PackedScene" uid="uid://c8sh03dd257d8" path="res://portal.tscn" id="9_b60u5"]
+[ext_resource type="Texture2D" uid="uid://de8rhj1o88dt2" path="res://sprites/WhatsApp_Image_2025-11-23_at_19.33.56-removebg-preview.png" id="9_kmy7e"]
+[ext_resource type="PackedScene" uid="uid://c7m7rbn3u2vd8" path="res://chao.tscn" id="9_liaj6"]
+[ext_resource type="PackedScene" uid="uid://dfbteqlch3a21" path="res://player.tscn" id="10_b60u5"]
+[ext_resource type="Texture2D" uid="uid://tt2u83qs5vrh" path="res://imagem/pause_717217.png" id="10_ghrvs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ihfcg"]
+bg_color = Color(0.983449, 0.45418, 0.236985, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rka8t"]
+bg_color = Color(0.550563, 0.000801762, 0.659764, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5hph3"]
+bg_color = Color(0.54902, 0, 0.658824, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j7kpp"]
+bg_color = Color(0.54902, 0, 0.658824, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bjebc"]
+bg_color = Color(0.54902, 0, 0.658824, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_liaj6"]
+bg_color = Color(0.407843, 0.266667, 0.301961, 1)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_fmu3g")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_repeat = 2
+offset_left = -12.0
+offset_top = -12.0
+offset_right = 8848.0
+offset_bottom = 3288.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_liaj6")
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect"]
+texture_repeat = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.196078)
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_repeat = 2
+offset_left = 1760.0
+offset_top = -12.0
+offset_right = 10620.0
+offset_bottom = 3303.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_liaj6")
+
+[node name="ColorRect" type="ColorRect" parent="TextureRect2"]
+texture_repeat = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.196078)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 945.0
+offset_top = 143.0
+offset_right = 1094.0
+offset_bottom = 208.0
+theme_override_colors/font_color = Color(0.54902, 0, 0.658824, 1)
+theme_override_fonts/font = ExtResource("7_g0tlw")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_ihfcg")
+text = " 6 x 1 = "
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 957.0
+offset_top = 236.0
+offset_right = 1118.0
+offset_bottom = 340.0
+columns = 2
+
+[node name="Button" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.984314, 0.454902, 0.235294, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_rka8t")
+text = " 2"
+alignment = 0
+
+[node name="Button2" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.992157, 0.541176, 0.364706, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_5hph3")
+text = "  3  "
+alignment = 0
+
+[node name="Button3" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.992157, 0.541176, 0.364706, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_j7kpp")
+text = "  4  "
+alignment = 0
+
+[node name="Button4" type="Button" parent="GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.992157, 0.541176, 0.364706, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_bjebc")
+text = " 6"
+alignment = 0
+
+[node name="Chao" parent="." instance=ExtResource("9_liaj6")]
+
+[node name="portal" parent="." instance=ExtResource("9_b60u5")]
+position = Vector2(2488, 17)
+next_scene = "res://telaproxnivel3.tscn"
+
+[node name="enemie3" parent="." instance=ExtResource("6_6p2dc")]
+position = Vector2(415, -130)
+scale = Vector2(3, 3)
+
+[node name="Node2D" parent="." instance=ExtResource("10_b60u5")]
+
+[node name="Camera2D" type="Camera2D" parent="Node2D"]
+offset = Vector2(300, 0)
+limit_left = 0
+limit_top = 0
+
+[node name="FeedbackLabel" type="Label" parent="."]
+offset_left = 787.0
+offset_top = 24.0
+offset_right = 1113.0
+offset_bottom = 87.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_liaj6")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer2"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HeartContainer" type="HBoxContainer" parent="CanvasLayer2/Control"]
+layout_mode = 0
+offset_left = 891.0
+offset_top = 6.0
+offset_right = 5341.0
+offset_bottom = 526.0
+scale = Vector2(0.1, 0.1)
+
+[node name="Heart1" type="TextureRect" parent="CanvasLayer2/Control/HeartContainer"]
+layout_mode = 2
+texture = ExtResource("9_kmy7e")
+
+[node name="Heart2" type="TextureRect" parent="CanvasLayer2/Control/HeartContainer"]
+layout_mode = 2
+texture = ExtResource("9_kmy7e")
+
+[node name="Heart3" type="TextureRect" parent="CanvasLayer2/Control/HeartContainer"]
+layout_mode = 2
+texture = ExtResource("9_kmy7e")
+
+[node name="pausar" type="Button" parent="CanvasLayer2/Control/HeartContainer"]
+process_mode = 3
+layout_mode = 2
+icon = ExtResource("9_833wy")
+
+[node name="despausar" type="Button" parent="CanvasLayer2/Control/HeartContainer"]
+process_mode = 3
+layout_mode = 2
+icon = ExtResource("10_ghrvs")
+
+[connection signal="pressed" from="GridContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="GridContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="GridContainer/Button3" to="." method="_on_button_3_pressed"]
+[connection signal="pressed" from="GridContainer/Button4" to="." method="_on_button_4_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Control/HeartContainer/pausar" to="." method="_on_pausar_pressed"]
+[connection signal="pressed" from="CanvasLayer2/Control/HeartContainer/despausar" to="." method="_on_despausar_pressed"]

@@ -1,0 +1,163 @@
+[gd_scene load_steps=21 format=3 uid="uid://dp63a1vq4chcd"]
+
+[ext_resource type="Script" uid="uid://dx6griroleb7h" path="res://gd/enemie1.gd" id="1_oqg2n"]
+[ext_resource type="Texture2D" uid="uid://cf1gpbg8txjic" path="res://sprites/Bringer-Of-Death/SpriteSheet/Bringer-of-Death-SpritSheet.png" id="1_xnxpp"]
+[ext_resource type="Texture2D" uid="uid://bn5nqktw04rra" path="res://imagem/Gemini_Generated_Image_pzxb52pzxb52pzxb.png" id="3_kwrcu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s2i5t"]
+atlas = ExtResource("1_xnxpp")
+region = Rect2(840, 279, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0wwd"]
+atlas = ExtResource("1_xnxpp")
+region = Rect2(0, 372, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4v621"]
+atlas = ExtResource("1_xnxpp")
+region = Rect2(140, 372, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdqlh"]
+atlas = ExtResource("1_xnxpp")
+region = Rect2(420, 372, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vspb8"]
+atlas = ExtResource("1_xnxpp")
+region = Rect2(560, 372, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17pei"]
+atlas = ExtResource("1_xnxpp")
+region = Rect2(700, 372, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gb3rf"]
+atlas = ExtResource("1_xnxpp")
+region = Rect2(840, 372, 140, 93)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqg2n"]
+atlas = ExtResource("1_xnxpp")
+region = Rect2(0, 124, 140, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwrcu"]
+atlas = ExtResource("1_xnxpp")
+region = Rect2(140, 124, 140, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0rc5"]
+atlas = ExtResource("1_xnxpp")
+region = Rect2(280, 124, 140, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8a861"]
+atlas = ExtResource("1_xnxpp")
+region = Rect2(420, 124, 140, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ifyp"]
+atlas = ExtResource("1_xnxpp")
+region = Rect2(560, 124, 140, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_feng4"]
+atlas = ExtResource("1_xnxpp")
+region = Rect2(700, 124, 140, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01hkl"]
+atlas = ExtResource("1_xnxpp")
+region = Rect2(840, 124, 140, 62)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8a3xm"]
+atlas = ExtResource("1_xnxpp")
+region = Rect2(980, 124, 140, 62)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_74tm5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s2i5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0wwd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4v621")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdqlh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vspb8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17pei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gb3rf")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oqg2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwrcu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0rc5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8a861")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ifyp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_feng4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01hkl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8a3xm")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnxpp"]
+size = Vector2(156, 235)
+
+[node name="enemie1" type="CharacterBody2D"]
+script = ExtResource("1_oqg2n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(440, 256)
+scale = Vector2(3.5, 3.5)
+sprite_frames = SubResource("SpriteFrames_74tm5")
+animation = &"walk"
+
+[node name="TextureRect2" type="TextureRect" parent="AnimatedSprite2D"]
+texture_repeat = 2
+offset_left = 8860.0
+offset_right = 17720.0
+offset_bottom = 3300.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("3_kwrcu")
+
+[node name="ColorRect" type="ColorRect" parent="AnimatedSprite2D/TextureRect2"]
+texture_repeat = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.00049
+offset_top = 10.0
+offset_right = 5.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.196078)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(561, 277)
+shape = SubResource("RectangleShape2D_xnxpp")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

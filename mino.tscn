@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://cydlyaehfyh6o"]
+
+[ext_resource type="Texture2D" uid="uid://f3fojsw4gmgm" path="res://sprites/mino_v1.1_free/animations/minotaur_288x160_SpriteSheet.png" id="1_8x7r2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fp60t"]
+atlas = ExtResource("1_8x7r2")
+region = Rect2(3168, 160, 288, 160)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_et15m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fp60t")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8x7r2"]
+size = Vector2(99, 105.5)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(161, 132)
+sprite_frames = SubResource("SpriteFrames_et15m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(158, 153)
+shape = SubResource("RectangleShape2D_8x7r2")

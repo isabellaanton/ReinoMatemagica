@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://pxtpmqgcavpx"]
+
+[ext_resource type="Script" uid="uid://dnodt34vacnxi" path="res://gd/main_menu.gd" id="1_j4jwh"]
+[ext_resource type="Texture2D" uid="uid://r0o4x1ubx8if" path="res://imagem/WhatsApp Image 2025-11-23 at 17.11.06.jpg" id="2_j4jwh"]
+[ext_resource type="FontFile" uid="uid://cunv1wgf8pum4" path="res://fonte/LilitaOne-Regular.ttf" id="3_g0tah"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiy7p"]
+bg_color = Color(0.394333, 0.00183975, 0.843219, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7a2f"]
+bg_color = Color(0.396078, 0, 0.843137, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_j4jwh")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -18.0
+offset_right = 1665.0
+offset_bottom = 1006.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_j4jwh")
+
+[node name="Reiniciar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 227.0
+offset_top = 315.0
+offset_right = 430.0
+offset_bottom = 383.0
+theme_override_fonts/font = ExtResource("3_g0tah")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiy7p")
+text = "REINICIAR"
+
+[node name="Sair" type="Button" parent="."]
+layout_mode = 0
+offset_left = 228.0
+offset_top = 396.0
+offset_right = 429.0
+offset_bottom = 462.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.77084, 0.770839, 0.770839, 1)
+theme_override_fonts/font = ExtResource("3_g0tah")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_h7a2f")
+text = "SAIR"
+
+[connection signal="pressed" from="Reiniciar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]

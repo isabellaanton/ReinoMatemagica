@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=3 uid="uid://bvpcby8j8e5co"]
+
+[ext_resource type="Script" uid="uid://dxhcpcsu2xxsa" path="res://gd/telaproxnivel.gd" id="1_a4v4j"]
+[ext_resource type="Texture2D" uid="uid://by007g5uq86m3" path="res://imagem/WhatsApp Image 2025-11-22 at 19.25.53.jpg" id="2_a4v4j"]
+[ext_resource type="FontFile" uid="uid://cunv1wgf8pum4" path="res://fonte/LilitaOne-Regular.ttf" id="3_17o58"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ro15p"]
+bg_color = Color(0.369781, 0.13854, 0.580476, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c8dg3"]
+bg_color = Color(0.368627, 0.137255, 0.580392, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ucn2"]
+bg_color = Color(0.368627, 0.137255, 0.580392, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_a4v4j")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = -10.0
+offset_right = 1158.0
+offset_bottom = 663.0
+texture = ExtResource("2_a4v4j")
+
+[node name="ProxNivel" type="Button" parent="."]
+layout_mode = 0
+offset_left = 440.0
+offset_top = 93.0
+offset_right = 690.0
+offset_bottom = 196.0
+theme_override_fonts/font = ExtResource("3_17o58")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_ro15p")
+text = "PRÓXIMO NÍVEL"
+
+[node name="Reiniciar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 439.0
+offset_top = 266.0
+offset_right = 689.0
+offset_bottom = 365.0
+theme_override_fonts/font = ExtResource("3_17o58")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_c8dg3")
+text = "REINICIAR"
+
+[node name="Sair" type="Button" parent="."]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 439.0
+offset_right = 688.0
+offset_bottom = 535.0
+theme_override_fonts/font = ExtResource("3_17o58")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_0ucn2")
+text = "SAIR"

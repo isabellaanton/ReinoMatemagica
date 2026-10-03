@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://dt3cyl2jagro"]
+
+[ext_resource type="Texture2D" uid="uid://ci8c8twkxl26s" path="res://imagem/WhatsApp Image 2025-11-10 at 19.12.17.jpeg" id="1_eiy7p"]
+[ext_resource type="Script" uid="uid://dnodt34vacnxi" path="res://gd/main_menu.gd" id="1_h7a2f"]
+[ext_resource type="FontFile" uid="uid://cunv1wgf8pum4" path="res://fonte/LilitaOne-Regular.ttf" id="2_eiy7p"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiy7p"]
+bg_color = Color(0.394333, 0.00183975, 0.843219, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h7a2f"]
+bg_color = Color(0.396078, 0, 0.843137, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_h7a2f")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -16.0
+offset_top = -18.0
+offset_right = 1665.0
+offset_bottom = 1006.0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_eiy7p")
+
+[node name="Jogar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 461.0
+offset_top = 258.0
+offset_right = 664.0
+offset_bottom = 326.0
+theme_override_fonts/font = ExtResource("2_eiy7p")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_eiy7p")
+text = "JOGAR"
+
+[node name="Sair" type="Button" parent="."]
+layout_mode = 0
+offset_left = 462.0
+offset_top = 343.0
+offset_right = 663.0
+offset_bottom = 409.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.77084, 0.770839, 0.770839, 1)
+theme_override_fonts/font = ExtResource("2_eiy7p")
+theme_override_font_sizes/font_size = 40
+theme_override_styles/normal = SubResource("StyleBoxFlat_h7a2f")
+text = "SAIR"
+
+[connection signal="pressed" from="Jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]
